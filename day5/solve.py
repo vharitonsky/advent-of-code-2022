@@ -34,11 +34,9 @@ def parse_stacks():
             number_line = line
             break
         stack_lines.append(line)
-
     stacks = []
     for i, c in enumerate(number_line):
         if c.isdigit():
-            n = int(c)
             boxes = []
             for k, line in enumerate(stack_lines):
                 if len(line) < i:
@@ -56,7 +54,6 @@ def parse_instructions():
     for line in f:
         if not line.strip():
             break
-
     for line in f:
         numbers = []
         for c in line.split():
